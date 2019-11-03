@@ -1,0 +1,302 @@
+body{
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+}
+
+/* ヘッダー */
+header{
+  background-color: #333;
+  color: #fafafa;
+  overflow: hidden;
+  width: 100%;
+  height: 180px;
+}
+.title{
+  float: left;
+}
+header h1{
+  text-align: center;
+  font-size: 80px;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+.menu{
+  float: right;
+  position: relative;
+  top: 80px;
+}
+header ul{
+  list-style: none;
+}
+header li{
+  float: left;
+  padding: 0 30px;
+}
+header a{
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 28px;
+}
+header a:hover{
+  color: #c93a40;
+}
+.container{
+  width: 100%;
+  height: 585px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* トップ画面 */
+.top-message{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+.top-message p{
+  margin: 0 auto;
+  padding: 20px;
+}
+.top-message a{
+  text-decoration: none;
+  color: #333;
+  background-color: #fafafa;
+  border: 1px solid #333;
+  border-bottom: 5px solid #333;
+  border-radius: 3px;
+  padding: 10px;
+}
+.top-message a:active{
+  border-bottom: 1px solid #333;
+  position: relative;
+  top: 5px;
+}
+.points-container{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content:center;
+}
+.points{
+  width: 30%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #555;
+  text-align: center;
+  padding: 0 10px;
+}
+.points:last-child{
+  border: none;
+}
+.points h2{
+  font-size: 32px;
+  color: #c93a40;
+}
+.points p{
+  font-family: sans-serif;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ゲーム画面 */
+.typing-word-box{
+  width: 1080px;
+  height: 280px;
+  margin: 0 auto;
+}
+.contents-box{
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+}
+.word-container{
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  width: 80%;
+  height: 80%;
+  border: 3px solid #333;
+  border-radius: 20px;
+  text-align: center;
+}
+.word{
+  font-size: 48px;
+  position: relative;
+  top: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.your-typing-word-container{
+  height: 16px;
+  font-size: 24px;
+  position: relative;
+  top: 5px;
+}
+.your-typing-word{
+  height: 16px;
+}
+.mean{
+  font-size: 24px;
+  position: relative;
+  top: 50px;
+  font-family: sans-serif;
+}
+.keyboard{
+  width: 1080px;
+  height: 300px;
+  margin: 0 auto;
+}
+.press-enter{
+  color: #c93a40;
+  font-weight: bold;
+}
+.table-container{
+  margin: 0 auto;
+}
+table{
+  border-collapse: collapse;
+}
+table td{
+  border: 3px solid #333;
+  font-size: 30px;
+  width: 40px;
+  height: 50px;
+  text-align: center;
+}
+.number-line{
+  margin: 0 auto;
+}
+.q-line{
+  margin: 0 auto;
+  position: relative;
+  bottom: 3px;
+}
+.a-line{
+  margin: 0 auto;
+  position: relative;
+  bottom: 6px;
+  left: 10px;
+}
+.z-line{
+  margin: 0 auto;
+  position: relative;
+  bottom: 9px;
+  left: 15px;
+}
+.space{
+  margin: 0 auto;
+  position: relative;
+  bottom: 12px;
+  width: 200px;
+}
+.button{
+  border: 1px solid #333;
+  font-size: 20px;
+  width: 80px;
+  height: 50px;
+  border-radius: 4px;
+  border-bottom: 6px solid #333;
+  outline: none;
+  position: relative;
+  bottom: 150px;
+}
+.start-button{
+  margin-bottom: 10px;
+}
+.start-button:active, .reload-button:active{
+  border-bottom: 1px solid #333;
+  transform: translateY(6px);
+}
+
+/* ユーザー登録・ログイン画面 */
+.register{
+  width: 40%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  position: relative;
+  top: 50px;
+}
+.register h2{
+  text-align: center;
+  font-size: 32px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.register form{
+  margin: 0 auto;
+  font-size: 24px;
+  width: 90%;
+  line-height: 150%;
+}
+.form-group{
+  padding-bottom: 10px;
+}
+.form-group input{
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: #DDDDDD;
+}
+.register-submit{
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px 40px;
+  color: #333;
+  border: 1px solid #333;
+  border-bottom: 5px solid #333;
+  border-radius: 3px;
+  float: right;
+  position: relative;
+  top: 20px;
+}
+.register-submit:active{
+  border-bottom: 1px solid #333;
+  position: relative;
+  top: 25px;
+}
+.checkbox{
+  position: relative;
+  top: 10px;
+}
+.checkbox-message{
+  font-size: 18px;
+}
+
+/* フッター */
+footer{
+  background-color: #333;
+  color: white;
+  height: 85px;
+  text-align: center;
+}
+footer p{
+  margin: 0 auto;
+  font-size: 18px;
+  position: relative;
+  top: 30px;
+}
+footer a{
+  color: white;
+}
+footer a:hover{
+  color: #c93a40;
+}
+
+/* 入力エラー時関連 */
+.id-pass-error{
+  text-align: center;
+}
+.help-block{
+  font-size: 16px;
+  color: #c93a40;
+}
+.has-error input{
+  border: 1px solid #c93a40;
+}
