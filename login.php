@@ -16,7 +16,6 @@ if(!empty($_POST)){
   //変数にユーザー情報を代入
   $id = $_POST['id'];
   $pass = $_POST['pass'];
-  $pass_save = (!empty($_POST['pass_save'])) ? true : false;
 
   try{
     //DB接続準備

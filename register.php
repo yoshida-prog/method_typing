@@ -60,14 +60,14 @@ if(!empty($_POST)){
 
           debug('セッション変数の中身：'.print_r($_SESSION,true));
 
-          header('Location: mypage.php');
+          header('Location:mypage.php');
         }else{
           error_log('クエリに失敗しました。');
-          $err_msg['common'] = MSG05;
+          $err_msg['common'] = MSG05.'a';
         }
       }catch(Exception $e){
         error_log('エラー発生：'.$e->getMessage());
-        $err_msg['common'] = MSG05;
+        $err_msg['common'] = MSG05.'b';
       }
 
     }
