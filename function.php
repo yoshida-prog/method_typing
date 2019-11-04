@@ -104,17 +104,15 @@ function validStrLength($str, $key){
 //DB接続関数
 function dbConect(){
   //DB接続準備
-  $dsn = 'mysql:dbname=method_typing;host=localhost;charset=utf8';
-  $user = 'root';
-  $password = 'root';
+  $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
+  $db['dbname'] = ltrim($db['path'], '/');
+  $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
+  $user = $db['user'];
+  $password = $db['pass'];
   $options = array(
-    // SQL実行失敗時にはエラーコードのみ設定
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
-    // デフォルトフェッチモードを連想配列形式に設定
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    // バッファードクエリを使う(一度に結果セットをすべて取得し、サーバー負荷を軽減)
-    // SELECTで得た結果に対してもrowCountメソッドを使えるようにする
-    PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
+    PDO::MYSQL_ATTR_USE_BUFFERED_QUERY =>true,
   );
   //PDOオブジェクト生成をしてDBへ接続する
   $dbh = new PDO($dsn, $user, $password, $options);
