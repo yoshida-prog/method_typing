@@ -24,7 +24,7 @@ var missCount = 0;
 //打ち込んでいる文字を格納する変数
 var typingWord = '';
 //問題数(0~)
-var numOfQuestions = 1;
+var numOfQuestions = 10;
 //何問目かカウントする変数
 var count = 0;
 //ゲーム開始時間を取得するための変数
@@ -86,7 +86,7 @@ function type(e){
           'miss': missCount
         }
       });
-      
+
 
     }else if(typingWord === nowWord.text()){
       //最後のお題以外を消化したときはこちらで問題を再取得
