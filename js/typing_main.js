@@ -126,7 +126,7 @@ function type(e){
     }else if(typingWord === nowWord.text()){
       //最後のお題以外を消化したときはこちらで問題を再取得
       count++;
-      randomNumber = Math.floor(Math.random()*8);
+      randomNumber = Math.floor(Math.random()*WORDS.length);
       nowWord = $('.word').text(WORDS[randomNumber][0]);
       nowMean = $('.mean').text(WORDS[randomNumber][1]);
       typingWord = '';
