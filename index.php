@@ -27,7 +27,7 @@ debugLogStart();
       </div>
       <div class="menu">
         <ul>
-          <li><a href="top.php">TOP</a></li>
+          <li><a href="index.php">TOP</a></li>
           <?php if(!empty($_SESSION['login_date'])) echo '<li><a href="typing.php">PLAYGAME</a></li>' ?>
           <?php if(empty($_SESSION['login_date'])) echo '<li><a href="register.php">REGISTER</a></li>' ?>
           <?php if(!empty($_SESSION['login_date'])) echo '<li><a href="mypage.php">MYPAGE</a></li>' ?>

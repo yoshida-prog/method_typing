@@ -95,7 +95,7 @@ if(!empty($_POST)){
       </div>
       <div class="menu">
         <ul>
-          <li><a href="top.php">TOP</a></li>
+          <li><a href="index.php">TOP</a></li>
           <?php if(!empty($_SESSION['login'])) echo '<li><a href="typing.php">PLAYGAME</a></li>' ?>
           <li><a href="register.php">REGISTER</a></li>
           <?php if(empty($_SESSION['login'])) echo '<li><a href="login.php">LOGIN</a></li>' ?>

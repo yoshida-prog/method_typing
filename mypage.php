@@ -53,7 +53,7 @@ debug('あなたのランキング：'.print_r($yourRanking['ranking'], true));
       </div>
       <div class="menu">
         <ul>
-          <li><a href="top.php">TOP</a></li>
+          <li><a href="index.php">TOP</a></li>
           <li><a href="typing.php">PLAYGAME</a></li>
           <li><a href="mypage.php">MYPAGE</a></li>
           <li><a href="logout.php">LOGOUT</a></li>
