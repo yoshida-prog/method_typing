@@ -1,5 +1,10 @@
+html{
+  height: 100%;
+}
+
 body{
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   font-family: "Oswald", sans-serif;
 }
@@ -10,41 +15,41 @@ header{
   color: #fafafa;
   overflow: hidden;
   width: 100%;
-  height: 120px;
+  height: 11%;
 }
 .title{
   float: left;
 }
 header h1{
   text-align: center;
-  font-size: 70px;
+  font-size: 48px;
   margin: 0 auto;
   padding: 0px 20px;
 }
 .menu{
   float: right;
   position: relative;
-  top: 45px;
+  top: 15px;
 }
 header ul{
   list-style: none;
 }
 header li{
   float: left;
-  padding: 0 30px;
 }
 header a{
   text-decoration: none;
   color: #fafafa;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
+  padding: 10px 20px;
 }
 header a:hover{
   color: #c93a40;
 }
 .container{
   width: 100%;
-  height: 540px;
+  height: 80%;
   margin: 0 auto;
   background-color: #fafafa;
   color: #333;
@@ -52,13 +57,14 @@ header a:hover{
 
 /* トップ画面 */
 .top-message{
+  height: 15%;
   text-align: center;
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 18px;
 }
 .top-message p{
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px;
 }
 .top-message a{
   text-decoration: none;
@@ -87,6 +93,7 @@ header a:hover{
   border-right: 1px solid #555;
   text-align: center;
   padding: 0 10px;
+  font-size: 14px;
 }
 .points:last-child{
   border: none;
@@ -271,21 +278,7 @@ table td{
 /* フッター */
 footer{
   background-color: #333;
-  color: white;
-  height: 50px;
-  text-align: center;
-}
-footer p{
-  margin: 0 auto;
-  font-size: 18px;
-  position: relative;
-  top: 30px;
-}
-footer a{
-  color: white;
-}
-footer a:hover{
-  color: #c93a40;
+  height: 9%;
 }
 
 /* 入力エラー時関連 */
