@@ -68,15 +68,7 @@ $yourRanking = $ranking->fetch(PDO::FETCH_ASSOC);
 
     <div class="container">
 
-      <!-- <div class="icon-container">
-        <div class="icon-box">
-          <form>
-            <img src="<?php if($result2) echo $result2['user_img']; ?>" class="icon">
-            <a href="prof_edit.php<?php if(!empty($result2)) echo '?id='.$_SESSION['user_id']; ?>" class="icon-change"></a>
-            <span><i class="fas fa-exchange-alt fa-2x"></i></span>
-          </form>
-        </div>
-      </div> -->
+      
 
       <div class="user-info-container">
         <div class="user-info">
