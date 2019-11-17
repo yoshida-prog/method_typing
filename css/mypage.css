@@ -53,18 +53,55 @@ header a:hover{
   margin: 0 auto;
   background-color: #333;
   color: #fafafa;
-  display: flex;
-  flex-direction: row;
 }
 
 /* ãƒžã‚¤ãƒšãƒ¼ã‚¸ */
+.icon-container{
+  height: 30%;
+}
+.icon-box{
+  margin: 0 auto;
+  width: 120px;
+  padding: 35px;
+}
+.icon-container a{
+  display: block;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #fafafa;
+  border-radius: 60px;
+  box-sizing: border-box;
+  opacity: 0;
+}
+.icon-container a:active{
+  border-bottom: none;
+  top: 5px;
+}
+.icon-container img{
+  width: 120px;
+  height: 120px;
+  border: 1px solid #fafafa;
+  border-radius: 60px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.icon-box span{
+  position: relative;
+  left: 90px;
+  bottom: 28px;
+}
+.user-info-container{
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+  padding: 10px;
+  box-sizing: border-box;
+}
 .user-info{
   /* margin: 0 auto; */
   width: 50%;
-  height: 361.55px;
+  height: 100%;
   border-right: 1px solid #fafafa;
-  position: relative;
-  top: 100px;
   box-sizing: border-box;
   /* display: flex; */
   /* flex-direction: column; */
@@ -93,10 +130,8 @@ header a:hover{
 .achievement{
   /* margin: 0 auto; */
   width: 50%;
-  height: 361.55px;
+  height: 100%;
   float: left;
-  position: relative;
-  top: 100px;
   text-align: center;
 }
 .achievement-title{
@@ -110,6 +145,15 @@ header a:hover{
   position: relative;
   top: 80.71px;
 }
+.achievement-title a{
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  color: #fafafa;
+  position: relative;
+  top: 80.71px;
+  font-size: 18px;
+}
 .achievement-content{
   margin: 0 auto;
   height: 38.2%;
@@ -118,6 +162,55 @@ header a:hover{
 .ranking-box{
   position: relative;
   top: 10px;
+}
+
+/* 編集画面 */
+.img-box{
+  background-color: #fafafa;
+  width: 120px;
+  height: 120px;
+  border: 3px dashed #777;
+  border-radius: 60px;
+  box-sizing: border-box;
+  position: relative;
+  top: 250px;
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 40px;
+}
+.input-img{
+  opacity: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.img-box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.icon-change-form{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.icon-change-submit{
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  top: 280px;
+  font-size: 18px;
+  color: #333;
+  border-radius: 5px;
 }
 
 /* ãƒ•ãƒƒã‚¿ãƒ¼ */

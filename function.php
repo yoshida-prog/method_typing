@@ -152,4 +152,41 @@ function getUser($u_id){
   return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
+function upLoadImg($file){
+  try{
+    switch ($file['error']) {
+        case UPLOAD_ERR_OK: // OK
+            break;
+        case UPLOAD_ERR_NO_FILE:   // ファイル未選択の場合
+            throw new RuntimeException('ファイルが選択されていません');
+        case UPLOAD_ERR_INI_SIZE:  // php.ini定義の最大サイズが超過した場合
+        case UPLOAD_ERR_FORM_SIZE: // フォーム定義の最大サイズ超過した場合
+            throw new RuntimeException('ファイルサイズが大きすぎます');
+        default: // その他の場合
+            throw new RuntimeException('その他のエラーが発生しました');
+    }
+    $type = @exif_imagetype($file['tmp_name']);
+    if(!in_array($type, [IMAGETYPE_GIF, IMAGETYPE_JPEG, IMAGETYPE_PNG], true)){
+      throw new RuntimeException("Error Processing Request");
+    }
+    $path = 'uploads/'.sha1_file($file['tmp_name']).image_type_to_extension($type);
+    if(!move_uploaded_file($file['tmp_name'], $path)){
+      throw new RuntimeException('ファイル保存時にエラーが発生しました');
+    }
+    chmod($path, 0644);
+    return $path;
+  }catch(RuntimeException $e){
+    debug(print_f('アップロード失敗'));
+  }
+}
+
+function getImg($str){
+  $dbh = dbConect();
+  $sql = 'SELECT * FROM img WHERE user_id = :user_id';
+  $data = array('user_id' => $str);
+  $stmt = queryPost($dbh, $sql, $data);
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  return $result;
+}
+
 ?>
