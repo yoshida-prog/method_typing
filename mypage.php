@@ -33,10 +33,10 @@ $ranking->execute(array(':id' => $_SESSION['user_id']));
 $yourRanking = $ranking->fetch(PDO::FETCH_ASSOC);
 //debug('あなたのランキング：'.print_r($yourRanking['ranking'], true));
 
-$sql2 = 'SELECT * FROM img WHERE user_id = :user_id';
-$data2 = array(':user_id' => $_SESSION['user_id']);
-$stmt2 = queryPost($dbh, $sql2, $data2);
-$result2 = $stmt2->fetch(PDO::FETCH_ASSOC);
+// $sql2 = 'SELECT * FROM img WHERE user_id = :user_id';
+// $data2 = array(':user_id' => $_SESSION['user_id']);
+// $stmt2 = queryPost($dbh, $sql2, $data2);
+// $result2 = $stmt2->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -68,7 +68,7 @@ $result2 = $stmt2->fetch(PDO::FETCH_ASSOC);
 
     <div class="container">
 
-      <div class="icon-container">
+      <!-- <div class="icon-container">
         <div class="icon-box">
           <form>
             <img src="<?php if($result2) echo $result2['user_img']; ?>" class="icon">
@@ -76,7 +76,7 @@ $result2 = $stmt2->fetch(PDO::FETCH_ASSOC);
             <span><i class="fas fa-exchange-alt fa-2x"></i></span>
           </form>
         </div>
-      </div>
+      </div> -->
 
       <div class="user-info-container">
         <div class="user-info">
