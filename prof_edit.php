@@ -14,10 +14,7 @@ if(!empty($_FILES)){
   debug(print_r($_FILES));
   $img = (!empty($_FILES['img']['name'])) ? upLoadImg($_FILES['img']) : '';
   $dbh = dbConect();
-  $delete = 'DELETE FROM img WHERE user_id = :user_id';
-  $delete_data = array(':user_id' => $_SESSION['user_id']);
-  $delete_stmt = queryPost($dbh, $delete, $delete_data);
-  $sql = 'INSERT INTO img (user_id, user_img) VALUES (:user_id, :user_img)';
+  $sql = 'UPDATE img SET user_img = :user_img WHERE user_id = :user_id';
   $data = array(':user_id' => $_SESSION['user_id'], ':user_img' => $img);
   $stmt = queryPost($dbh, $sql, $data);
 }
