@@ -19,6 +19,7 @@ if(!empty($_FILES)){
   $sql = 'INSERT INTO img (user_id, user_img) VALUES (:user_id, :user_img)';
   $data = array(':user_id' => $_SESSION['user_id'], ':user_img' => $img);
   $stmt = queryPost($dbh, $sql, $data);
+  header('Location:prof_edit.php?p='.$_SESSION['user_id']);
 }
 $img_id = (!empty($_GET['id'])) ? $_GET['id'] : '';
 $dbFormData = (!empty($img_id)) ? getImg($_SESSION['user_id']) : '';
