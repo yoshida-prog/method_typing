@@ -11,7 +11,6 @@ debugLogStart();
 require('auth.php');
 
 if(!empty($_FILES)){
-  debug(print_r($_FILES));
   $img = (!empty($_FILES['img']['name'])) ? upLoadImg($_FILES['img']) : '';
   $dbh = dbConect();
   $sql = 'UPDATE img SET user_img = :user_img WHERE user_id = :user_id';
